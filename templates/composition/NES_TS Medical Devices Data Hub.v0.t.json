@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0",
       "build_uid" : "75f1ebce-78bd-4898-99b6-c888938e81cb",
-      "MD5-CAM-1.0.1" : "a965499a08e67e090faaed569d5c98a1",
+      "MD5-CAM-1.0.1" : "e49950e7aadd3bd6f6574196379b764e",
       "PARENT:MD5-CAM-1.0.1" : "2A789520F48E91960C4825733C8BA68F",
       "original_language" : "ISO_639-1::en"
     },
@@ -4309,7 +4309,23 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "4DD4327B2A07666ACC92DBB0FDE0B2EC"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "For the recording of organisation details aligned with corresponding FHIR resource.",
+          "keywords" : [ ],
+          "use" : "Use to record organisation details aligned with the corresponding FHIR resources.\n\nThe slots for telecoms, address and contact should be filled with the appropriate FHIR resource-aligned clusters.\n\nThis cluster archetype is intended to be used inside FHIR resource aligned archetypes such as CLUSTER.fhir_contact.v0 and CLUSTER.fhir_practitioner.v0.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation_cc.v0",
     "differential" : true,
@@ -4329,16 +4345,7 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0010.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_BOOLEAN",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -4422,7 +4429,23 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "A4C278B59C4D855C741CA3E0C21E9011"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "For the recording of identifier details aligned with corresponding FHIR resource or data types.",
+          "keywords" : [ ],
+          "use" : "Use to record identifier details aligned with the corresponding FHIR resources or data types.\n\nThis cluster archetype is intended to be used inside the Identifier slot in any FHIR resource-aligned archetypes. These may be clusters themselves or entry archetypes.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.identifier_cc.v0",
     "differential" : true,
@@ -4471,32 +4494,14 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0007.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0008.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
       } ],
