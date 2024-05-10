@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.0.9",
+      "sem_ver" : "1.0.0",
       "build_uid" : "75f1ebce-78bd-4898-99b6-c888938e81cb",
-      "MD5-CAM-1.0.1" : "40df5b25f74af255aca51359e386904e",
+      "MD5-CAM-1.0.1" : "a965499a08e67e090faaed569d5c98a1",
       "PARENT:MD5-CAM-1.0.1" : "2A789520F48E91960C4825733C8BA68F",
       "original_language" : "ISO_639-1::en"
     },
@@ -1662,6 +1662,15 @@
                 } ]
               } ],
               "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0019.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-organisation_cc-001.v0",
+              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -2858,15 +2867,6 @@
                 } ]
               } ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0057.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-organisation_cc-007.v0",
-              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -4298,7 +4298,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "66071865-997f-443a-8d7a-3b81e276ae73",
+    "uid" : "87b900f5-c552-4282-8a35-9988f7825c53",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -4309,29 +4309,13 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "4DD4327B2A07666ACC92DBB0FDE0B2EC"
       },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "For the recording of organisation details aligned with corresponding FHIR resource.",
-          "keywords" : [ ],
-          "use" : "Use to record organisation details aligned with the corresponding FHIR resources.\n\nThe slots for telecoms, address and contact should be filled with the appropriate FHIR resource-aligned clusters.\n\nThis cluster archetype is intended to be used inside FHIR resource aligned archetypes such as CLUSTER.fhir_contact.v0 and CLUSTER.fhir_practitioner.v0.",
-          "copyright" : "© Apperta Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation_cc.v0",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-organisation_cc-007.v0"
+      "value" : "openEHR-EHR-CLUSTER.ovl-organisation_cc-001.v0"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -4345,27 +4329,29 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0010.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
-          "nodeId" : "at0011.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "defaultValue" : {
-                "@type" : "DV_TEXT",
-                "value" : "Health Board"
-              },
+              "rmTypeName" : "DV_BOOLEAN",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0011.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0012.1",
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -4381,7 +4367,7 @@
           "nodeId" : "at0018.1",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-identifier_cc-008.v0",
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-identifier_cc-001.v0",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -4391,7 +4377,20 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { }
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Health Board",
+            "description" : "Organisation details aligned with FHIR resource."
+          },
+          "at0012.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012.1",
+            "text" : "Health Board Name",
+            "description" : "Name associated with the organisation."
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -4412,7 +4411,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "603a87fc-4f35-488c-95b6-495e463a2f37",
+    "uid" : "5b991ad3-db6e-4bfb-88a4-51974cca50c1",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -4423,29 +4422,13 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "A4C278B59C4D855C741CA3E0C21E9011"
       },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "For the recording of identifier details aligned with corresponding FHIR resource or data types.",
-          "keywords" : [ ],
-          "use" : "Use to record identifier details aligned with the corresponding FHIR resources or data types.\n\nThis cluster archetype is intended to be used inside the Identifier slot in any FHIR resource-aligned archetypes. These may be clusters themselves or entry archetypes.",
-          "copyright" : "© Apperta Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.identifier_cc.v0",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-identifier_cc-008.v0"
+      "value" : "openEHR-EHR-CLUSTER.ovl-identifier_cc-001.v0"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -4470,12 +4453,13 @@
                 "rmAttributeName" : "defining_code",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "at0003", "at0004", "at0005", "at0006" ]
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -4487,14 +4471,32 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0007.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0008.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         } ]
       } ],
@@ -4505,17 +4507,23 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "at0000.1" : {
+          "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Health Board",
-            "description" : "Identifier details aligned with FHIR resources or data types."
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
           }
         }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0003", "at0004", "at0005", "at0006" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "e8394e36-24ab-46a7-8b94-32b9579b44dc",
