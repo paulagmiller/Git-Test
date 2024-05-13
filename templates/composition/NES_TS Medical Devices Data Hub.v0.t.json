@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "0.0.9",
       "build_uid" : "75f1ebce-78bd-4898-99b6-c888938e81cb",
-      "MD5-CAM-1.0.1" : "c30a8ba211a28d52c16d8f8986865298",
+      "MD5-CAM-1.0.1" : "7490f740e45f13b7f7d19b3b1ae9b065",
       "PARENT:MD5-CAM-1.0.1" : "2A789520F48E91960C4825733C8BA68F",
       "original_language" : "ISO_639-1::en"
     },
@@ -4398,9 +4398,26 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "1aa5230ebafc09a315311d2bd9d4c153"
+        "PARENT:MD5-CAM-1.0.1" : "9f82b3d6efe6b5095ca9cd427339bd13"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "This cluster is to support the requirement to record 'Class' and possibly other values as part of a medical device record., where it is necessary to store these values in the EHR. Its initial purpose is specifically to enable the recording of the 'Class' of a medical device as defined in the United Kingdom's \"Medicines and Healthcare products Regulatory Agency\" (MHRA) requirements.",
+          "keywords" : [ "mhra, device, regulatory, class, category, mdr" ],
+          "use" : "Use inside the Medical Device or Medical Device Details clusters to allow the recording of taxonomical definitions of attributes relating to the regulation of medical devices, such as Class and Category.",
+          "misuse" : "Do not use this cluster for other medical device details, all of which should be captured in other medical device archetypes. If the required data can be externally referenced then it may be more appropriate to do that rather than persist the data inside the EHR.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.medical-device-regulatory-details.v0",
     "differential" : true,
